@@ -20,6 +20,8 @@ function getOpponentName(bot, method, message = undefined) {
                 bot.opponentName = match
             });
         }
+    } else {
+        bot.opponentName = "your ign"
     }
 }
 
