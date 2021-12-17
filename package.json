@@ -1,0 +1,11 @@
+{
+  "name": "pvpBots",
+  "version": "1.0.0",
+  "dependencies": {
+    "mineflayer": "git+https://github.com/aesthetic0001/mineflayer.git#master",
+    "prismarine-item": "^1.11.1",
+    "prismarine-viewer": "^1.21.0",
+    "prismarine-world": "^3.6.0",
+    "vec3": "^0.1.7"
+  }
+}
