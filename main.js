@@ -47,18 +47,11 @@ bot.shouldFight = false
 bot.shouldStrafe = false
 bot.shouldBeAbleToPunch = true
 
-const lastLook = {
-    lastYaw: 0,
-    lastPitch: 0
-}
-
 async function duel() {
     return new Promise(async (resolve) => {
         console.log("Dueling")
         await sleep(250)
         await queue(bot, method, mode)
-        lastLook.lastYaw = bot.entity.yaw
-        lastLook.lastPitch = bot.entity.pitch
         bot.setQuickBarSlot(0)
         bot.once("doneMatch", () => {
             bot.shouldFight = false
