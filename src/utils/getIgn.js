@@ -1,8 +1,8 @@
-const supportedMethods = ["minemen", "pvpland", "hypixel", "localhost"]
+const supportedMethods = ["hypixel", "localhost"]
 
 function getOpponentName(bot, method, message = undefined) {
     if (!supportedMethods.includes(method)) throw new Error("The method is not supported! It should be: " + supportedMethods.toString())
-    if (method === "minemen" || method === "hypixel") {
+    if (method === "hypixel") {
         bot.opponentNameText = message.toString().split('Opponent: ')[1]
         bot.opponentName = bot.opponentNameText.trim()
         const regex = /\[VIP|MVP|] (.*)/gm;
@@ -20,11 +20,6 @@ function getOpponentName(bot, method, message = undefined) {
                 bot.opponentName = match
             });
         }
-    } else if (method === "pvpland") {
-        const scoreboardJson = bot.scoreboards.objective.itemsMap["§1§a"].displayName.extra
-        return bot.opponentName = `${scoreboardJson[0].json.text}${scoreboardJson[2].json.text}`
-    } else if (method === "localhost") {
-        return bot.opponentName = "soakd"
     }
 }
 
