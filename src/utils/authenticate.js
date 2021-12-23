@@ -1,5 +1,4 @@
-const supportedMethods = ["hypixel", "localhost"]
-const {acceptedModes} = require("./acceptedModes")
+const {acceptedModes, supportedMethods} = require("./acceptedModes")
 const {Mode} = require("../constructors/Mode")
 
 let modes = []
