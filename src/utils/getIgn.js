@@ -1,4 +1,4 @@
-const supportedMethods = ["hypixel", "localhost"]
+const {supportedMethods} = require("./acceptedModes")
 
 function getOpponentName(bot, method, message = undefined) {
     if (!supportedMethods.includes(method)) throw new Error("The method is not supported! It should be: " + supportedMethods.toString())
