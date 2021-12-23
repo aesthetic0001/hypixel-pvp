@@ -1,3 +1,4 @@
 const acceptedModes = ["sumo", "boxing", "classic"]
+const acceptedMethods = ["hypixel", "localhost"]
 
-module.exports = {acceptedModes}
+module.exports = {acceptedModes, acceptedMethods}
